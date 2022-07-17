@@ -5,8 +5,13 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [title, setTitle] = useState('');
   const [director, setDirector] = useState('');
-  const [color, setColor] = useState('blue');
+  const [color, setColor] = useState('red');
   const [filter, setFilter] = useState('');
+ 
+  function handleMovieClick(i) {
+    movies.splice(i, 1);
+    setMovies(movies.slice());
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -58,7 +63,7 @@ function App() {
       <div className='filter-and-list'>
         <div className='movie-list'>
           {
-            movies.map((movie, i) => <div key={movie.title + i} 
+            movies.map((movie, i) => <div onClick={() => handleMovieClick(i)} key={movie.title + i} 
               className='poster' style={{ background: movie.color }}>
               <h2>{movie.title}</h2>
               <p>By {movie.director}</p>

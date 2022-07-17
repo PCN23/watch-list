@@ -65,6 +65,7 @@ label {
   height: 200px;
   width: 150px;
   margin: 10px;
+  box-shadow: 13px 3px 14px -1px rgba(0,0,0,0.69);
 }
 
 .movie-form, .movie-preview {
