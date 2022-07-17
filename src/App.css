@@ -1,5 +1,14 @@
+
+body, html, #root, .App {
+  height: 100%
+}
+
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .App-logo {
@@ -35,4 +44,42 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+label {
+  display: block;
+}
+
+.form-and-preview {
+  background-color: yellow;
+  height: 50%;
+  width: 80%;
+  display: flex;
+  justify-content: space-around ;
+}
+
+.poster {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 200px;
+  width: 150px;
+  margin: 10px;
+}
+
+.movie-form, .movie-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-and-list {
+  height: 50%;
+  width: 80%;
+  background-color: lightcoral;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
 }
